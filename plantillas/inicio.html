@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tecnología</title>
+    <title>TechStore</title>
     <link rel="stylesheet" href="/css/bootstrap.min.css">
 </head>
 
@@ -19,12 +19,12 @@
                 </div>
                 <div class="col-md-4 text-center">
                     <!-- TODO Cambiar el tipo de letra en CSS -->
-                    <span class="h2">TecnoTienda
+                    <span class="h2">TechStore
                     </span>
                 </div>
                 <div class="col-md-4 text-md-right d-none d-md-block">
                     <span class="navbar-brand ">
-                        <a href="" class=" px-1">
+                        <a href="/plantillas/index.html" class=" px-1">
                             Cerrar sesión
                         </a>
                     </span>
@@ -41,21 +41,21 @@
                     <div class="col-10 col-md-10">
                         <div class="row align-items-stretch ">
                             <div class=" col-md-2 col-3 text-center">
-                                <a href="">Apple</a>
+                                <a href="https://www.apple.com/la/" target="_blank">Apple</a>
                             </div>
                             <div class=" col-md-2 col-3 text-center">
-                                <a href="">Xiaomi</a>
+                                <a href="https://www.mi.com/global/" target="_blank">Xiaomi</a>
                             </div>
                             <div class=" col-md-2 col-3 text-center">
-                                <a href="">Microsoft</a>
+                                <a href="https://www.microsoft.com/es-ec/" target="_blank">Microsoft</a>
                             </div>
                             <div class=" col-md-2 col-3 text-center">
-                                <a href="">Google</a>
+                                <a href="https://about.google/products/?tab=wh" target="_blank">Google</a>
                             </div>
                         </div>
                     </div>
                     <div class="col-2 col-md-2 text-center">
-                        <a href="" class="btn-outline-info" role="button">
+                        <span class="btn-outline-info" id="compra">
                             <span class=" btn-dark text-center align-content-center">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor"
                                     class="bi bi-cart d-md-none" viewBox="0 0 22 22">
@@ -64,8 +64,8 @@
                                 </svg>
                             </span>
                             <span class=" d-none d-md-inline">Carrito</span>
-                            <span class="btn-dark px-1 d-none d-md-inline">0</span>
-                        </a>
+                            <span class="btn-dark px-1 d-none d-md-inline" id="carrito">0</span>
+                        </span>
                     </div>
                 </div>
         </nav>
@@ -85,14 +85,13 @@
                 <div class=" container-fluid w-100">
                     <div class="row align-items-stretch justify-content-lg-center">
                         <div class=" col-md-11 col-12">
-                            <!-- TODO: Cambiar la descripción de cada item y el tamaño en la vista mobile -->
                             <div class="carousel-inner ">
                                 <div class="carousel-item active ">
-                                    <img src="https://i.blogs.es/e4a8f6/microsoft-g12ad61351_1920/500_333.jpg" class="d-block w-100"
-                                        alt="..." height="380px">
+                                    <img src="https://i.blogs.es/e4a8f6/microsoft-g12ad61351_1920/500_333.jpg"
+                                        class="d-block w-100" alt="..." height="380px">
                                     <div class="carousel-caption ">
                                         <h5>Microsoft</h5>
-                                        <p class=" text-light">Some representative placeholder content for the first slide.</p>
+                                        <p class=" text-light">Diseñado para la vida de hoy y de mañana.</p>
                                     </div>
                                 </div>
                                 <div class="carousel-item ">
@@ -100,23 +99,23 @@
                                         class="d-block w-100" alt="..." height="380px">
                                     <div class="carousel-caption ">
                                         <h5>Apple</h5>
-                                        <p>Some representative placeholder content for the second slide.</p>
+                                        <p>Las mejores experiencias. Sólo en Apple.</p>
                                     </div>
                                 </div>
                                 <div class="carousel-item ">
-                                    <img src="https://i.blogs.es/007693/google/500_333.jpg"
-                                        class="d-block w-100" alt="..." height="380px">
+                                    <img src="https://i.blogs.es/007693/google/500_333.jpg" class="d-block w-100"
+                                        alt="..." height="380px">
                                     <div class="carousel-caption ">
                                         <h5>Google</h5>
-                                        <p>Some representative placeholder content for the third slide.</p>
+                                        <p>Productos útiles para todos los usuarios.</p>
                                     </div>
                                 </div>
                                 <div class="carousel-item ">
                                     <img src="https://www.muycomputer.com/wp-content/uploads/2021/04/Xiaomi-Mi-11-Lite-5G-Precio-Especificaciones-1-e1618833955635.jpg"
                                         class="d-block w-100" alt="..." height="380px">
                                     <div class="carousel-caption">
-                                        <h5 >Xiaomi</h5>
-                                        <p>Some representative placeholder content for the third slide.</p>
+                                        <h5>Xiaomi</h5>
+                                        <p>Siempre crea que algo maravilloso está apunto de suceder.</p>
                                     </div>
                                 </div>
 
@@ -144,33 +143,39 @@
                         <div class="row">
                             <div class="col-md-6 col-12">
                                 <div class="card mb-3">
-                                    <img src="/recursos/macbookpro.jpg"
-                                        class="card-img-top" alt="...">
+                                    <img src="/recursos/macbookpro.jpg" class="card-img-top" alt="...">
                                     <div class="card-body">
                                         <h5 class="card-title">MacBook Pro 2021</h5>
-                                        <p class="card-text">This is a wider card with supporting text below as a
-                                            natural
-                                            lead-in to additional content. This content is a little bit longer.</p>
-                                            <div class="align-items-center">
-                                                <button id="boton1" class="btn btn-dark" type="button">Agregar</button>
-                                                <input type="number" name="cantidad" id="cantidad" class=" form-control-sm " value="1">
-                                            </div>
+                                        <p class="card-text">Llegó la MacBook Pro más poderosa de todas. De la mano de
+                                            los ultrarrápidos chips M1 Pro y M1 Max, los primeros diseñados por Apple
+                                            para profesionales, disfrutarás un rendimiento revolucionario con una
+                                            duración excepcional de la batería.</p>
+                                        <div class="align-items-center">
+                                            <button id="boton1" name="boton1" class="btn btn-dark" type="button"
+                                                role="menuitem">Agregar</button>
+                                            <input type="number" name="cantidad1" id="cantidad1"
+                                                class=" form-control-sm " value="1">
                                         </div>
+                                    </div>
                                 </div>
                             </div>
                             <div class="col-md-6 col">
                                 <div class="card mb-3">
-                                    <img src="/recursos/iphone13.jpg"
-                                        class="card-img-top" alt="...">
+                                    <img src="/recursos/iphone13.jpg" class="card-img-top" alt="...">
                                     <div class="card-body">
                                         <h5 class="card-title">iPhone 13</h5>
-                                        <p class="card-text">This is a wider card with supporting text below as a
-                                            natural
-                                            lead-in to additional content. This content is a little bit longer.</p>
+                                        <p class="card-text">¿Quieres cambiar el enfoque o ajustar el difuminado después
+                                            de haber grabado el video? No hay problema. Puedes ajustar lo que necesites
+                                            con sólo tocar y deslizar. Ni las cámaras profesionales de cine pueden hacer
+                                            tanto.</p>
+                                        <form>
+
                                             <div class="align-items-center">
-                                                <button id="boton1" class="btn btn-dark" type="button">Agregar</button>
-                                                <input type="number" name="cantidad" id="cantidad" class=" form-control-sm " value="1">
+                                                <button id="boton2" class="btn btn-dark" type="button">Agregar</button>
+                                                <input type="number" name="cantidad2" id="cantidad2"
+                                                    class=" form-control-sm " value="1">
                                             </div>
+                                        </form>
                                     </div>
                                 </div>
 
@@ -180,34 +185,33 @@
                         <div class="row">
                             <div class="col-md-6 col-12">
                                 <div class="card mb-3">
-                                    <img src="/recursos/pixel6.jpg"
-                                        class="card-img-top" alt="...">
+                                    <img src="/recursos/pixel6.jpg" class="card-img-top" alt="...">
                                     <div class="card-body">
                                         <h5 class="card-title">Google Pixel 6</h5>
-                                        <p class="card-text">This is a wider card with supporting text below as a
-                                            natural
-                                            lead-in to additional content. This content is a little bit longer.</p>
-                                            <div class="align-items-center">
-                                                <button id="boton1" class="btn btn-dark" type="button">Agregar</button>
-                                                <input type="number" name="cantidad" id="cantidad" class=" form-control-sm " value="1">
-                                            </div>
+                                        <p class="card-text">Un teléfono de Google que incluye
+                                            todo lo que deseas.</p>
+                                        <div class="align-items-center">
+                                            <button id="boton3" class="btn btn-dark" type="button">Agregar</button>
+                                            <input type="number" name="cantidad3" id="cantidad3"
+                                                class=" form-control-sm " value="1">
                                         </div>
+                                    </div>
                                 </div>
                             </div>
                             <div class="col-md-6 col">
                                 <div class="card mb-3">
-                                    <img src="/recursos/scooter.jpg"
-                                        class="card-img-top" alt="...">
+                                    <img src="/recursos/scooter.jpg" class="card-img-top" alt="...">
                                     <div class="card-body">
                                         <h5 class="card-title">Xiaommi Scooter</h5>
-                                        <p class="card-text">This is a wider card with supporting text below as a
-                                            natural
-                                            lead-in to additional content. This content is a little bit longer.</p>
-                                            <div class="align-items-center">
-                                                <button id="boton1" class="btn btn-dark" type="button">Agregar</button>
-                                                <input type="number" name="cantidad" id="cantidad" class=" form-control-sm " value="1">
-                                            </div>
+                                        <p class="card-text">Mi Electric Scooter Essential está diseñado para las
+                                            personas que quieren mantenerlo ligero y fácil. Utiliza una aleación de
+                                            aluminio de baja densidad y alta resistencia aeroespacial.</p>
+                                        <div class="align-items-center">
+                                            <button id="boton4" class="btn btn-dark" type="button">Agregar</button>
+                                            <input type="number" name="cantidad4" id="cantidad4"
+                                                class=" form-control-sm " value="1">
                                         </div>
+                                    </div>
                                 </div>
 
                             </div>
@@ -216,34 +220,30 @@
                         <div class="row">
                             <div class="col-md-6 col-12">
                                 <div class="card mb-3">
-                                    <img src="/recursos/windows11.jpeg"
-                                        class="card-img-top" alt="...">
+                                    <img src="/recursos/windows11.jpeg" class="card-img-top" alt="...">
                                     <div class="card-body">
                                         <h5 class="card-title">Windows 11</h5>
-                                        <p class="card-text">This is a wider card with supporting text below as a
-                                            natural
-                                            lead-in to additional content. This content is a little bit longer.</p>
-                                            <div class="align-items-center">
-                                                <button id="boton1" class="btn btn-dark" type="button">Agregar</button>
-                                                <input type="number" name="cantidad" id="cantidad" class=" form-control-sm " value="1">
-                                            </div>
+                                        <p class="card-text">Una nueva experiencia de Windows que te acerca a las personas y cosas que amas.</p>
+                                        <div class="align-items-center">
+                                            <button id="boton5" class="btn btn-dark" type="button">Agregar</button>
+                                            <input type="number" name="cantidad5" id="cantidad5"
+                                                class=" form-control-sm " value="1">
                                         </div>
+                                    </div>
                                 </div>
                             </div>
                             <div class="col-md-6 col">
                                 <div class="card mb-3">
-                                    <img src="/recursos/xiaomimi11.jpg"
-                                        class="card-img-top" alt="...">
+                                    <img src="/recursos/xiaomimi11.jpg" class="card-img-top" alt="...">
                                     <div class="card-body">
                                         <h5 class="card-title">Xiaomi Mi 11</h5>
-                                        <p class="card-text">This is a wider card with supporting text below as a
-                                            natural
-                                            lead-in to additional content. This content is a little bit longer.</p>
-                                            <div class="align-items-center">
-                                                <button id="boton1" class="btn btn-dark" type="button">Agregar</button>
-                                                <input type="number" name="cantidad" id="cantidad" class=" form-control-sm " value="1">
-                                            </div>
+                                        <p class="card-text">El producto insignia de Xiaomi tiene todo lo que necesitas en un teléfono.</p>
+                                        <div class="align-items-center">
+                                            <button id="boton6" class="btn btn-dark" type="button">Agregar</button>
+                                            <input type="number" name="cantidad6" id="cantidad6"
+                                                class=" form-control-sm " value="1">
                                         </div>
+                                    </div>
                                 </div>
 
                             </div>
@@ -269,17 +269,19 @@
                                 <div class="my-3">
                                     <form>
                                         <div class="form-group">
-                                          <label for="formControlRange">Calificación</label>
-                                          <input type="range" class="form-control-range" id="formControlRange">
-                                          <button type="button" class="btn-sm btn-dark" role="button">Calificar</button>
+                                            <label for="formControlRange">Calificación</label>
+                                            <input type="range" class="form-control-range" id="formControlRange">
+                                            <button type="button" class="btn-sm btn-dark" id="calificacion"
+                                                role="button">Calificar</button>
                                         </div>
-                                      </form>
+                                    </form>
                                 </div>
                                 <div class="my-3">
                                     <form>
                                         <label for="inputComentario">Deje sus comentarios</label>
                                         <textarea class="form-control" aria-label="With textarea" rows="7"></textarea>
-                                        <button class=" btn btn-dark form-check mt-2">Enviar</button>
+                                        <button class=" btn btn-dark form-check mt-2" id="comentario" type="button"
+                                            role="contentinfo">Enviar</button>
                                     </form>
                                 </div>
 
@@ -303,12 +305,12 @@
             </div>
             <div class="row align-items-center text-center d-md-none">
                 <div class="col">
-                    <a href="">Cerrar sesión</a>
+                    <a href="/plantillas/index.html">Cerrar sesión</a>
                 </div>
             </div>
             <div class="row align-items-center text-center">
                 <div class="col">
-                    <a href="">Volver arriba</a>
+                    <a href="#top">Volver arriba</a>
                 </div>
             </div>
         </div>
@@ -323,6 +325,9 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js"
         integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2"
         crossorigin="anonymous"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <script src="/js/inicio.js"></script>
 
 </body>
 
