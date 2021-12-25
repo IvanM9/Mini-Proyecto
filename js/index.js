@@ -19,7 +19,7 @@ $(document).ready(function () {
         if (verificarCamposVacios(datos)) {
 
             if (datos.correo === "prueba@gmail.com" && datos.contraseña === "54321")
-                location.href = "/plantillas/inicio.html"
+                location.href = "../plantillas/inicio.html"
             else
                 viewErorr("Datos incorrectos","Intente nuevamente o solicite recordar las credenciales")
             
