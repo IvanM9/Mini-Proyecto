@@ -54,6 +54,7 @@ $().ready(function () {
 
     // Función para añadir productos al carrito
     function addCart(boton) {
+        // TODO Pedir directamente el id de la cantidad y quitar el proceso de convertirlo
         let cant = "#cantidad" + boton.slice(5, 6);
         let ncant = $(cant).val();
         if (ncant > 0) {
